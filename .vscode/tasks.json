@@ -4,7 +4,7 @@
 		{
 			"type": "cppbuild",
 			"label": "C/C++: g++-13 build and run file",
-			"command": "/opt/homebrew/bin/g++-13",
+			"command": "g++",
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
@@ -22,7 +22,6 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "compiler: /opt/homebrew/bin/g++-13"
 		}
 	]
 }
