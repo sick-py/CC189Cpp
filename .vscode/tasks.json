@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: g++-13 build and run file",
+			"label": "C/C++ build file",
 			"command": "g++",
 			"args": [
 				"-fdiagnostics-color=always",
