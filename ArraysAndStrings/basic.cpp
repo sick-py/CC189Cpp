@@ -78,6 +78,33 @@ int main(){
 	for (auto it = arrayV.begin(); it != arrayV.end(); ++it){
 		cout<<*it<<" ";
 	}
+	/*Pre-increment (++it):
+	This operator increments the iterator and then returns a reference to the incremented value. 
+	Since it doesn't need to create a temporary copy, it's generally more efficient, especially for user-defined iterators.
+	
+	Post-increment (it++):
+	This operator returns a copy of the iterator as it was before incrementing it, and then increments the original iterator. 
+	This extra copy can incur a slight performance overhead, particularly with complex iterator types.
+	Using ++it is preferred because it avoids the unnecessary temporary copy that would occur with it++. This is especially relevant for iterators, where efficiency matters.
+
+	According to C++ best practices, when the returned value of the increment operation is not needed, the pre-increment version is usually the better choice.
+
+	In the loop, the iterator is simply used to traverse the container, and the returned value of the increment operator isn’t being stored or used in any computation. 
+	Both pre-increment (++it) and post-increment (it++) update the iterator so that it points to the next element
+	*/
+	vector<int> numbers2 = {10, 20, 30};
+
+    // Using post-increment: *it++ returns the value at the current iterator,
+    // then increments the iterator.
+    auto it = numbers2.begin();
+    cout << "Using post-increment (*it++): " << *it++ << endl; // prints 10
+
+    // Reset the iterator to the beginning
+    it = numbers2.begin();
+
+    // Using pre-increment: *++it increments the iterator first,
+    // then returns the value at the new position.
+    cout << "Using pre-increment (*++it): " << *++it << endl; // prints 20
 	
 
 
